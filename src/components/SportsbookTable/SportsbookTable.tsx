@@ -20,7 +20,7 @@ export const SportsbookTable: React.FC = () => {
             >
               running ball
               <img
-                src="/clear.png"
+                src="./clear.png"
                 alt="clear"
                 className={s.clearIcon}
               />
