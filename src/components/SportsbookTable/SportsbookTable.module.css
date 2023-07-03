@@ -11,11 +11,11 @@
   font-weight: bold;
 }
 
-.headerRow1 {
+.headerFirstRow {
   height: 20px;
 }
 
-.headerRow2 {
+.headerSecondRow {
   height: 15px;
 }
 
@@ -115,7 +115,7 @@
 
 .showMore {
   display: block;
-  background-color: #5C7CA6;
+  background-color: #5c7ca6;
   width: 40px;
   height: 18px;
   border-radius: 2px;
@@ -135,7 +135,7 @@
   margin-right: 5px;
 }
 
-.runningBall__row {
+.runningBallRow {
   display: flex;
   justify-content: space-between;
 }
@@ -145,7 +145,7 @@
   align-items: center;
 }
 
-.runningBall__link {
+.runningBallLink {
   margin: 2px;
 }
 
@@ -161,7 +161,7 @@
 
 .textRed {
   font-size: 11px;
-  color: #B50000;
+  color: #b50000;
 }
 
 .textBlue {
@@ -180,13 +180,13 @@
   font-size: 9px;
 }
 
-.hdp__row {
+.hdpRow {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
 }
 
-.activeNumber{
+.activeNumber {
   width: 35px;
   cursor: pointer;
   text-align: center;
@@ -196,14 +196,28 @@
   background-color: #ffe00e;
 }
 
-.ou__row {
+.ouRow {
   display: flex;
   margin-bottom: 5px;
   gap: 20px;
 }
 
-.oneXTwo__row {
+.oneXTwoRow {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 5px;
+}
+
+.hdpColumn {
+  border-right: none;
+}
+
+.ouColumn {
+  border-right: none;
+  border-left: none;
+}
+
+.oneXTwoColumn {
+  border-left: none;
+  border-right: 2px solid #daac9b;
 }

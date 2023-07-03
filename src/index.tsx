@@ -1,11 +1,7 @@
-import ReactDom from 'react-dom';
-import {
-  HashRouter,
-  Route,
-  Routes,
-} from 'react-router-dom';
-import { App } from './App';
-import { SportsbookTable } from './components/SportsbookTable/SportsbookTable';
+import ReactDom from "react-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
+import { App } from "./app";
+import { SportsbookTable } from "./components/SportsbookTable/sportsbookTable";
 
 ReactDom.render(
   <HashRouter>
@@ -24,5 +20,5 @@ ReactDom.render(
       </Route>
     </Routes>
   </HashRouter>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

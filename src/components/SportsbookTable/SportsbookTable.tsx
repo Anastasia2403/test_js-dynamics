@@ -1,398 +1,374 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import s from './SportsbookTable.module.css';
+import classNames from "classnames";
+import style from "./sportsbookTable.module.css";
 
 export const SportsbookTable: React.FC = () => {
   return (
-    <div className={s.container}>
-      <table className={s.table}>
+    <div className={style.container}>
+      <table className={style.table}>
         <thead>
-          <tr className={s.headerRow1}>
+          <tr className={style.headerFirstRow}>
             <th
-              className={`${s.headerCell} ${s.time}`}
+              className={classNames(style.headerCell, style.time)}
               rowSpan={2}
             >
               Time
             </th>
 
             <th
-              className={`${s.headerCell} ${s.runningBall}`}
+              className={classNames(style.headerCell, style.runningBall)}
               rowSpan={2}
             >
               running ball
-              <img
-                src="./clear.png"
-                alt="clear"
-                className={s.clearIcon}
-              />
+              <img src="/clear.png" alt="clear" className={style.clearIcon} />
             </th>
 
             <th
-              className={`${s.headerCell} ${s.fullTime}`}
+              className={classNames(style.headerCell, style.fullTime)}
               colSpan={3}
             >
               full time
             </th>
 
             <th
-              className={`${s.headerCell} ${s.firstHalf}`}
+              className={classNames(style.headerCell, style.firstHalf)}
               colSpan={4}
             >
               first half
             </th>
           </tr>
 
-          <tr className={s.headerRow2}>
-            <th
-              className={`${s.headerCell} ${s.hdp}`}
-            >
-              HDP
-            </th>
+          <tr className={style.headerSecondRow}>
+            <th className={classNames(style.headerCell, style.hdp)}>HDP</th>
 
-            <th
-              className={`${s.headerCell} ${s.ou}`}
-            >
-              O/U
-            </th>
+            <th className={classNames(style.headerCell, style.ou)}>O/U</th>
 
-            <th
-              className={`${s.headerCell} ${s.oneXTwo}`}
-            >
-              1x2
-            </th>
+            <th className={classNames(style.headerCell, style.oneXTwo)}>1x2</th>
 
-            <th
-              className={`${s.headerCell} ${s.hdp}`}
-            >
-              HDP
-            </th>
+            <th className={classNames(style.headerCell, style.hdp)}>HDP</th>
 
-            <th
-              className={`${s.headerCell} ${s.ou}`}
-            >
-              O/U
-            </th>
+            <th className={classNames(style.headerCell, style.ou)}>O/U</th>
 
-            <th
-              className={`${s.headerCell} ${s.oneXTwo}`}
-            >
-              1x2
-            </th>
+            <th className={classNames(style.headerCell, style.oneXTwo)}>1x2</th>
 
-            <th
-              className={`${s.headerCell} ${s.empty}`}
-            ></th>
+            <th className={classNames(style.headerCell, style.empty)}></th>
           </tr>
         </thead>
         <tbody>
-            <tr className={s.bodyRowHeader}>
-              <td
-                className={s.bodyCellHeader}
-                colSpan={8}
-              >
-                Australia victoria premier league
-              </td>
-            
-              <td 
-                className={s.bodyCellHeader}
-              >
-                <img
-                  src="/refresh_live.gif"
-                  alt="refresh"
-                />
-              </td>
-            </tr>
+          <tr className={style.bodyRowHeader}>
+            <td className={style.bodyCellHeader} colSpan={8}>
+              Australia victoria premier league
+            </td>
 
-            <tr className={s.bodyRow}>
-              <td
-                className={`${s.bodyCell} ${s.time}`}
-              >
-                <div className={s.textBlack}>0 : 0</div>
-                <div className={s.textBlue}>HT</div>
-              </td>
+            <td className={style.bodyCellHeader}>
+              <img src="/refresh_live.gif" alt="refresh" />
+            </td>
+          </tr>
 
-              <td
-                className={`${s.bodyCell} ${s.runningBall}`}
-              >
-                <div className={s.runningBall__row}>
-                  <div className={s.textRed}>Port melporne sharks</div>
-                
-                  <div className={s.linkBlock}>
-                    <a href='#' className={s.runningBall__link}>
-                      <img
-                        src="/television.on.png"
-                        alt="tv"
-                        className={s.TVIcon}
-                      />
-                    </a>
-                  
-                    <a href="#" className={s.runningBall__link}>
-                      <img
-                        src="/lc.png"
-                        alt="live"
-                        className={s.liveIcon}
-                      />
-                    </a>
-                  
-                    <a href="#" className={s.runningBall__link}>
-                      <img
-                        src="/uncheck.png"
-                        alt="star"
-                        className={s.starIcon}
-                      />
-                    </a>
-                  </div>
-                </div>
-              
-                <div className={s.runningBall__row}>
-                  <div className={s.textBlue}>Heidelberg United</div>
-                
-                  <div>
-                    <a href='#' className={s.runningBall__link}>
-                      <img
-                        src="/chart1.png"
-                        alt="chart"
-                        className={s.TVIcon}
-                      />
-                    </a>
-                  
-                    <a href="#" className={s.runningBall__link}>
-                      <img
-                        src="/forecast.png"
-                        alt="forecast"
-                        className={s.liveIcon}
-                      />
-                    </a>
-                  
-                    <a href="#" className={s.runningBall__link}>
-                      <img
-                        src="/tradein.png"
-                        alt="trade"
-                        className={s.starIcon}
-                      />
-                    </a>
-                  </div>
-                </div>
-              
-                <div className={s.textGray}>Draw</div>
-              </td>
+          <tr className={style.bodyRow}>
+            <td className={classNames(style.bodyCell, style.time)}>
+              <div className={style.textBlack}>0 : 0</div>
+              <div className={style.textBlue}>HT</div>
+            </td>
 
-              <td
-                className={`${s.bodyCell} ${s.hdp}`}
-                style={{borderRight: 'none'}}
-              >
-                <div className={s.hdp__row}>
-                  <div className={s.textDarkGrey}>0/-0.5</div>
-                  <div className={`${s.textRed} ${s.activeNumber}`}>-0.96</div>
-                </div>
-              
-                <div className={s.hdp__row}>
-                  <div className={s.textDarkGrey}></div>
-                  <div className={`${s.textBlack} ${s.activeNumber}`}>0.84</div>
-                </div>
-              </td>
+            <td className={classNames(style.bodyCell, style.runningBall)}>
+              <div className={style.runningBallRow}>
+                <div className={style.textRed}>Port melporne sharks</div>
 
-              <td
-                className={`${s.bodyCell} ${s.ou}`}
-                style={{borderRight: 'none', borderLeft: 'none'}}
-              >
-                <div className={s.ou__row}>
-                  <div className={s.textDarkGray}>1.5</div>
-                  <div className={s.textLightGray}>o</div>
-                  <div className={`${s.textBlue} ${s.activeNumber}`}>0.94</div>
-                </div>
-              
-                <div className={s.ou__row}>
-                  <div className={s.textDarkGray}></div>
-                  <div className={s.textLightGray}>u</div>
-                  <div className={`${s.textBlue} ${s.activeNumber}`}>0.92</div>
-                </div>
-              </td>
+                <div className={style.linkBlock}>
+                  <a href="#" className={style.runningBallLink}>
+                    <img
+                      src="/television.on.png"
+                      alt="tv"
+                      className={style.TVIcon}
+                    />
+                  </a>
 
-              <td
-                className={`${s.bodyCell} ${s.oneXTwo}`}
-                style={{borderLeft: 'none', borderRight: '2px solid #DAAC9B'}}
-              >
-                <div className={s.oneXTwo__row}>
-                  <div className={`${s.textBlue} ${s.activeNumber}`}>2.44</div>
-                </div>
-              
-                <div className={s.oneXTwo__row}>
-                  <div className={`${s.textBlue} ${s.activeNumber}`}>3.25</div>
-                </div>
-              
-                <div className={s.oneXTwo__row}>
-                  <div className={`${s.textBlue} ${s.activeNumber}`}>2.62</div>
-                </div>
-              </td>
+                  <a href="#" className={style.runningBallLink}>
+                    <img src="/lc.png" alt="live" className={style.liveIcon} />
+                  </a>
 
-              <td
-                className={`${s.bodyCell} ${s.firstHalf}`}
-                colSpan={3}
-              >
-              </td>
+                  <a href="#" className={style.runningBallLink}>
+                    <img
+                      src="/uncheck.png"
+                      alt="star"
+                      className={style.starIcon}
+                    />
+                  </a>
+                </div>
+              </div>
 
-              <td
-                className={`${s.bodyCell} ${s.empty}`}
-              >
-                <a
-                  href='#'
-                  className={s.showMore}
+              <div className={style.runningBallRow}>
+                <div className={style.textBlue}>Heidelberg United</div>
+
+                <div>
+                  <a href="#" className={style.runningBallLink}>
+                    <img
+                      src="/chart1.png"
+                      alt="chart"
+                      className={style.TVIcon}
+                    />
+                  </a>
+
+                  <a href="#" className={style.runningBallLink}>
+                    <img
+                      src="/forecast.png"
+                      alt="forecast"
+                      className={style.liveIcon}
+                    />
+                  </a>
+
+                  <a href="#" className={style.runningBallLink}>
+                    <img
+                      src="/tradein.png"
+                      alt="trade"
+                      className={style.starIcon}
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div className={style.textGray}>Draw</div>
+            </td>
+
+            <td
+              className={classNames(style.bodyCell, style.hdp, style.hdpColumn)}
+            >
+              <div className={style.hdpRow}>
+                <div className={style.textDarkGrey}>0/-0.5</div>
+                <div className={classNames(style.textRed, style.activeNumber)}>
+                  -0.96
+                </div>
+              </div>
+
+              <div className={style.hdpRow}>
+                <div className={style.textDarkGrey}></div>
+                <div
+                  className={classNames(style.textBlack, style.activeNumber)}
                 >
-                  <img
-                    src="/right-arrow.png"
-                    alt="arrow"
-                    className={s.arrowIcon}
-                  />
-                  8
-                </a>
-              </td>
-            </tr>
-
-            <tr className={s.bodyRow}>
-              <td
-                className={`${s.bodyCell} ${s.time}`}
-              >
-              </td>
-
-              <td
-                className={`${s.bodyCell} ${s.runningBall}`}
-              >
-              </td>
-
-              <td
-                className={`${s.bodyCell} ${s.hdp}`}
-                style={{borderRight: 'none'}}
-              >
-                <div className={s.hdp__row}>
-                  <div className={s.textDarkGrey}>0</div>
-                  <div className={`${s.textBlue} ${s.activeNumber}`}>0.69</div>
+                  0.84
                 </div>
-              
-                <div className={s.hdp__row}>
-                  <div className={s.textDarkGrey}></div>
-                  <div className={`${s.textRed} ${s.activeNumber}`}>-0.81</div>
+              </div>
+            </td>
+
+            <td
+              className={classNames(style.bodyCell, style.ou, style.ouColumn)}
+            >
+              <div className={style.ouRow}>
+                <div className={style.textDarkGray}>1.5</div>
+                <div className={style.textLightGray}>o</div>
+                <div className={classNames(style.textBlue, style.activeNumber)}>
+                  0.94
                 </div>
-              </td>
+              </div>
 
-              <td
-                className={`${s.bodyCell} ${s.ou}`}
-                style={{borderRight: 'none', borderLeft: 'none'}}
-              >
-                <div className={s.ou__row}>
-                  <div className={s.textDarkGray}>1.5/2</div>
-                  <div className={s.textLightGray}>o</div>
-                  <div className={`${s.textRed} ${s.activeNumber}`}>-0.80</div>
+              <div className={style.ouRow}>
+                <div className={style.textDarkGray}></div>
+                <div className={style.textLightGray}>u</div>
+                <div className={classNames(style.textBlue, style.activeNumber)}>
+                  0.92
                 </div>
-              
-                <div className={s.ou__row}>
-                  <div className={s.textDarkGray}></div>
-                  <div className={s.textLightGray}>u</div>
-                  <div className={`${s.textBlue} ${s.activeNumber}`}>0.66</div>
+              </div>
+            </td>
+
+            <td
+              className={classNames(
+                style.bodyCell,
+                style.oneXTwo,
+                style.oneXTwoColumn
+              )}
+            >
+              <div className={style.oneXTwoRow}>
+                <div className={classNames(style.textBlue, style.activeNumber)}>
+                  2.44
                 </div>
-              </td>
+              </div>
 
-              <td
-                className={`${s.bodyCell} ${s.oneXTwo}`}
-                style={{borderLeft: 'none', borderRight: '2px solid #DAAC9B'}}
-              >
-                <div className={s.oneXTwo__row}>
-                  <div className={`${s.textBlue} ${s.activeNumber}`}></div>
+              <div className={style.oneXTwoRow}>
+                <div className={classNames(style.textBlue, style.activeNumber)}>
+                  3.25
                 </div>
+              </div>
 
-                <div className={s.oneXTwo__row}>
-                  <div className={`${s.textBlue} ${s.activeNumber}`}></div>
+              <div className={style.oneXTwoRow}>
+                <div className={classNames(style.textBlue, style.activeNumber)}>
+                  2.62
                 </div>
+              </div>
+            </td>
 
-                <div className={s.oneXTwo__row}>
-                  <div className={`${s.textBlue} ${s.activeNumber}`}></div>
+            <td
+              className={classNames(style.bodyCell, style.firstHalf)}
+              colSpan={3}
+            ></td>
+
+            <td className={classNames(style.bodyCell, style.empty)}>
+              <a href="#" className={style.showMore}>
+                <img
+                  src="/right-arrow.png"
+                  alt="arrow"
+                  className={style.arrowIcon}
+                />
+                8
+              </a>
+            </td>
+          </tr>
+
+          <tr className={style.bodyRow}>
+            <td className={classNames(style.bodyCell, style.time)}></td>
+
+            <td className={classNames(style.bodyCell, style.runningBall)}></td>
+
+            <td
+              className={classNames(style.bodyCell, style.hdp, style.hdpColumn)}
+            >
+              <div className={style.hdpRow}>
+                <div className={style.textDarkGrey}>0</div>
+                <div className={classNames(style.textBlue, style.activeNumber)}>
+                  0.69
                 </div>
-              </td>
+              </div>
 
-              <td
-                className={`${s.bodyCell} ${s.firstHalf}`}
-                colSpan={3}
-              >
-              </td>
-              
-              <td
-                className={`${s.bodyCell} ${s.empty}`}
-              >
-              </td>
-            </tr>
-
-            <tr className={s.bodyRow}>
-              <td
-                className={`${s.bodyCell} ${s.time}`}
-              >
-              </td>
-
-              <td
-                className={`${s.bodyCell} ${s.runningBall}`}
-              >
-              </td>
-
-              <td
-                className={`${s.bodyCell} ${s.hdp}`}
-                style={{borderRight: 'none'}}
-              >
-                <div className={s.hdp__row}>
-                  <div className={s.textDarkGrey}>0.5</div>
-                  <div className={`${s.textRed} ${s.activeNumber}`}>-0.71</div>
+              <div className={style.hdpRow}>
+                <div className={style.textDarkGrey}></div>
+                <div className={classNames(style.textRed, style.activeNumber)}>
+                  -0.81
                 </div>
-              
-                <div className={s.hdp__row}>
-                  <div className={s.textDarkGrey}></div>
-                  <div className={`${s.textBlue} ${s.activeNumber}`}>0.59</div>
-                </div>
-              </td>
+              </div>
+            </td>
 
-              <td
-                className={`${s.bodyCell} ${s.ou}`}
-                style={{borderRight: 'none', borderLeft: 'none'}}
-              >
-                <div className={s.ou__row}>
-                  <div className={s.textDarkGray}>1/1.5</div>
-                  <div className={s.textLightGray}>o</div>
-                  <div className={`${s.textBlue} ${s.activeNumber}`}>0.64</div>
+            <td
+              className={classNames(style.bodyCell, style.ou, style.ouColumn)}
+            >
+              <div className={style.ouRow}>
+                <div className={style.textDarkGray}>1.5/2</div>
+                <div className={style.textLightGray}>o</div>
+                <div className={classNames(style.textRed, style.activeNumber)}>
+                  -0.80
                 </div>
-              
-                <div className={s.ou__row}>
-                  <div className={s.textDarkGray}></div>
-                  <div className={s.textLightGray}>u</div>
-                  <div className={`${s.textRed} ${s.activeNumber}`}>-0.78</div>
+              </div>
+
+              <div className={style.ouRow}>
+                <div className={style.textDarkGray}></div>
+                <div className={style.textLightGray}>u</div>
+                <div className={classNames(style.textBlue, style.activeNumber)}>
+                  0.66
                 </div>
-              </td>
+              </div>
+            </td>
 
-              <td
-                className={`${s.bodyCell} ${s.oneXTwo}`}
-                style={{borderLeft: 'none', borderRight: '2px solid #DAAC9B'}}
-              >
-                <div className={s.oneXTwo__row}>
-                  <div className={`${s.textBlue} ${s.activeNumber}`}></div>
+            <td
+              className={classNames(
+                style.bodyCell,
+                style.oneXTwo,
+                style.oneXTwoColumn
+              )}
+            >
+              <div className={style.oneXTwoRow}>
+                <div
+                  className={classNames(style.textBlue, style.activeNumber)}
+                ></div>
+              </div>
+
+              <div className={style.oneXTwoRow}>
+                <div
+                  className={classNames(style.textBlue, style.activeNumber)}
+                ></div>
+              </div>
+
+              <div className={style.oneXTwoRow}>
+                <div
+                  className={classNames(style.textBlue, style.activeNumber)}
+                ></div>
+              </div>
+            </td>
+
+            <td
+              className={classNames(style.bodyCell, style.firstHalf)}
+              colSpan={3}
+            ></td>
+
+            <td className={classNames(style.bodyCell, style.empty)}></td>
+          </tr>
+
+          <tr className={style.bodyRow}>
+            <td className={classNames(style.bodyCell, style.time)}></td>
+
+            <td className={classNames(style.bodyCell, style.runningBall)}></td>
+
+            <td
+              className={classNames(style.bodyCell, style.hdp, style.hdpColumn)}
+            >
+              <div className={style.hdpRow}>
+                <div className={style.textDarkGrey}>0.5</div>
+                <div className={classNames(style.textRed, style.activeNumber)}>
+                  -0.71
                 </div>
+              </div>
 
-                <div className={s.oneXTwo__row}>
-                  <div className={`${s.textBlue} ${s.activeNumber}`}></div>
+              <div className={style.hdpRow}>
+                <div className={style.textDarkGrey}></div>
+                <div className={classNames(style.textBlue, style.activeNumber)}>
+                  0.59
                 </div>
+              </div>
+            </td>
 
-                <div className={s.oneXTwo__row}>
-                  <div className={`${s.textBlue} ${s.activeNumber}`}></div>
+            <td
+              className={classNames(style.bodyCell, style.ou, style.ouColumn)}
+            >
+              <div className={style.ouRow}>
+                <div className={style.textDarkGray}>1/1.5</div>
+                <div className={style.textLightGray}>o</div>
+                <div className={classNames(style.textBlue, style.activeNumber)}>
+                  0.64
                 </div>
-              </td>
+              </div>
 
-              <td
-                className={`${s.bodyCell} ${s.firstHalf}`}
-                colSpan={3}
-              >
-              </td>
+              <div className={style.ouRow}>
+                <div className={style.textDarkGray}></div>
+                <div className={style.textLightGray}>u</div>
+                <div className={classNames(style.textRed, style.activeNumber)}>
+                  -0.78
+                </div>
+              </div>
+            </td>
 
-              <td
-                className={`${s.bodyCell} ${s.empty}`}
-              >
-              </td>
-            </tr>
+            <td
+              className={classNames(
+                style.bodyCell,
+                style.oneXTwo,
+                style.oneXTwoColumn
+              )}
+            >
+              <div className={style.oneXTwoRow}>
+                <div
+                  className={classNames(style.textBlue, style.activeNumber)}
+                ></div>
+              </div>
+
+              <div className={style.oneXTwoRow}>
+                <div
+                  className={classNames(style.textBlue, style.activeNumber)}
+                ></div>
+              </div>
+
+              <div className={style.oneXTwoRow}>
+                <div
+                  className={classNames(style.textBlue, style.activeNumber)}
+                ></div>
+              </div>
+            </td>
+
+            <td
+              className={classNames(style.bodyCell, style.firstHalf)}
+              colSpan={3}
+            ></td>
+
+            <td className={classNames(style.bodyCell, style.empty)}></td>
+          </tr>
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};

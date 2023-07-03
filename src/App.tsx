@@ -1,6 +1,6 @@
-import { Outlet } from 'react-router-dom';
-import './App.css';
-import { Header } from './components/Header/Header';
+import { Outlet } from "react-router-dom";
+import "./app.css";
+import { Header } from "./components/Header/header";
 
 export const App: React.FC = () => {
   return (
@@ -9,5 +9,4 @@ export const App: React.FC = () => {
       <Outlet />
     </div>
   );
-}
-
+};
