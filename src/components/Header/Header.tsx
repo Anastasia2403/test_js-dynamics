@@ -204,20 +204,64 @@ export const Header: React.FC = () => {
       </div>
       <div className={style.headerBottom}>
         <div className={style.time}>{localTime}</div>
-        <div className={style.news}>
-          <div className={style.announcements}>
-            <a href="#" className={style.announcementsLink}>
-              <img src="/tv.png" alt="tv" className={style.announcementsIcon} />
-              Announcements
-            </a>
-            <div className={style.announcementsCount}>270</div>
+        <div className={style.headerBottomContainer}>
+          <div className={style.news}>
+            <div className={style.announcements}>
+              <a href="#" className={style.announcementsLink}>
+                <img
+                  src="/tv.png"
+                  alt="tv"
+                  className={style.announcementsIcon}
+                />
+                Announcements
+              </a>
+              <div className={style.announcementsCount}>270</div>
+            </div>
+            <div className={style.msg}>
+              |
+              <a href="#" className={style.msgLink}>
+                Personal Msg
+              </a>
+            </div>
           </div>
-          <div className={style.msg}>
-            |
-            <a href="#" className={style.msgLink}>
-              Personal Msg
+          <div className={style.search}>
+            <div className={style.searchTeam}>
+              <input
+                type="text"
+                className={style.searchInput}
+                placeholder="Search Team"
+              />
+              <div className={style.searchButton}>
+                <img
+                  src="/search.png"
+                  alt="search"
+                  className={style.searchIcon}
+                />
+              </div>
+            </div>
+            <a className={style.headerButton} href="#">
+              Bet List
+            </a>
+            <a className={style.headerButton} href="#">
+              Statement
+            </a>
+            <a className={style.headerButton} href="#">
+              Result
+            </a>
+            <a className={style.headerButton} href="#">
+              Preferences
             </a>
           </div>
+        </div>
+        <div className={style.miniGameContainer}>
+          <div className={style.miniGameTitle}>Mini Game</div>
+          <a className={style.miniGameButton} href="#">
+            <img
+              src="/arrowhead-up.png"
+              alt="arrowhead-up"
+              className={style.miniGameButtonIcon}
+            />
+          </a>
         </div>
       </div>
     </header>
