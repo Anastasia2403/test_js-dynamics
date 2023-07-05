@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import classNames from "classnames";
 import style from "./sportsbookTable.module.css";
+import { SideBar } from "../SideBar/sideBar";
 
 export const SportsbookTable: React.FC = () => {
   return (
     <div className={style.container}>
+      <SideBar />
       <table className={style.table}>
         <thead>
           <tr className={style.headerFirstRow}>

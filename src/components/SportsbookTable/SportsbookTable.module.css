@@ -1,11 +1,12 @@
 .container {
   width: 100%;
+  display: flex;
+  margin: 10px 0;
 }
 
 .table {
   box-sizing: border-box;
   width: 802px;
-  margin: 10px auto;
   border-spacing: 0;
   border-left: 1px solid #ccc;
   font-weight: bold;
