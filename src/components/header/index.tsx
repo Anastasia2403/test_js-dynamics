@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import style from "./header.module.css";
 import classnames from "classnames";
 import { useEffect, useState } from "react";
@@ -54,25 +54,25 @@ export const Header: React.FC = () => {
         <div className={`${style.headerTopMenu} ${style.menu}`}>
           <div className={style.menuTop}>
             <div className={style.action}>
-              <NavLink to="/help" className={style.actionLink}>
+              <Link to="https://www.cmd328.com/main/static.aspx?q=faq.html" className={style.actionLink} target="_blank">
                 <img
                   src="/question-mark.png"
                   alt="question"
                   className={style.actionIconQuestion}
                 ></img>
                 Help
-              </NavLink>
+              </Link>
             </div>
 
             <div className={style.action}>
-              <NavLink to="/chat" className={style.actionLink}>
+              <Link to="https://www.cmd328.com/main/livechat.aspx" className={style.actionLink} target="_blank">
                 <img
                   src="/chat.png"
                   alt="chat"
                   className={style.actionIconConversation}
                 ></img>
                 Live Chat
-              </NavLink>
+              </Link>
             </div>
 
             <select className={style.languageSelect}>
@@ -207,21 +207,21 @@ export const Header: React.FC = () => {
         <div className={style.headerBottomContainer}>
           <div className={style.news}>
             <div className={style.announcements}>
-              <a href="#" className={style.announcementsLink}>
+              <Link to="https://www.cmd328.com/member/news/commnewslist.aspx" className={style.announcementsLink} target="_blank">
                 <img
                   src="/tv.png"
                   alt="tv"
                   className={style.announcementsIcon}
                 />
                 Announcements
-              </a>
+              </Link>
               <div className={style.announcementsCount}>270</div>
             </div>
             <div className={style.msg}>
               |
-              <a href="#" className={style.msgLink}>
+              <Link to="https://www.cmd328.com/member/news/commnewslist.aspx?t=MEMBER" className={style.msgLink} target="_blank">
                 Personal Msg
-              </a>
+              </Link>
             </div>
           </div>
           <div className={style.search}>
@@ -239,18 +239,18 @@ export const Header: React.FC = () => {
                 />
               </div>
             </div>
-            <a className={style.headerButton} href="#">
+            <Link className={style.headerButton} to="https://www.cmd328.com/member/betsview/betlist.aspx" target="_blank">
               Bet List
-            </a>
-            <a className={style.headerButton} href="#">
+            </Link>
+            <Link className={style.headerButton} to="https://www.cmd328.com/member/lists/paymentdaily.aspx" target="_blank">
               Statement
-            </a>
-            <a className={style.headerButton} href="#">
+            </Link>
+            <Link className={style.headerButton} to="https://www.cmd328.com/member/lists/matchresult.aspx" target="_blank">
               Result
-            </a>
-            <a className={style.headerButton} href="#">
+            </Link>
+            <Link className={style.headerButton} to="https://www.cmd328.com/member/lists/password.aspx?type=4" target="_blank">
               Preferences
-            </a>
+            </Link>
           </div>
         </div>
         <div className={style.miniGameContainer}>
