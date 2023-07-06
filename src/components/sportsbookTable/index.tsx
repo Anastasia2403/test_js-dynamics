@@ -2,6 +2,15 @@
 import classNames from "classnames";
 import style from "./sportsbookTable.module.css";
 import { SideBar } from "../sideBar";
+import clear from "../../icons/clear.png";
+import refresh from "../../icons/refresh_live.gif";
+import televisionOn from "../../icons/television.on.png";
+import lc from "../../icons/lc.png";
+import uncheck from "../../icons/uncheck.png";
+import chart from "../../icons/chart1.png";
+import forecast from "../../icons/forecast.png";
+import trade from "../../icons/tradein.png";
+import rightArrow from "../../icons/right-arrow.png";
 
 export const SportsbookTable: React.FC = () => {
   return (
@@ -22,7 +31,7 @@ export const SportsbookTable: React.FC = () => {
               rowSpan={2}
             >
               running ball
-              <img src="/clear.png" alt="clear" className={style.clearIcon} />
+              <img src={clear} alt="clear" className={style.clearIcon} />
             </th>
 
             <th
@@ -63,7 +72,7 @@ export const SportsbookTable: React.FC = () => {
             </td>
 
             <td className={style.bodyCellHeader}>
-              <img src="/refresh_live.gif" alt="refresh" />
+              <img src={refresh} alt="refresh" />
             </td>
           </tr>
 
@@ -78,55 +87,55 @@ export const SportsbookTable: React.FC = () => {
                 <div className={style.textRed}>Port melporne sharks</div>
 
                 <div className={style.linkBlock}>
-                  <a href="#" className={style.runningBallLink}>
+                  <div className={style.runningBallLink}>
                     <img
-                      src="/television.on.png"
+                      src={televisionOn}
                       alt="tv"
                       className={style.TVIcon}
                     />
-                  </a>
+                  </div>
 
-                  <a href="#" className={style.runningBallLink}>
-                    <img src="/lc.png" alt="live" className={style.liveIcon} />
-                  </a>
+                  <div className={style.runningBallLink}>
+                    <img src={lc} alt="live" className={style.liveIcon} />
+                  </div>
 
-                  <a href="#" className={style.runningBallLink}>
+                  <div className={style.runningBallLink}>
                     <img
-                      src="/uncheck.png"
+                      src={uncheck}
                       alt="star"
                       className={style.starIcon}
                     />
-                  </a>
+                  </div>
                 </div>
               </div>
 
               <div className={style.runningBallRow}>
                 <div className={style.textBlue}>Heidelberg United</div>
 
-                <div>
-                  <a href="#" className={style.runningBallLink}>
+                <div className={style.linkBlock}>
+                  <div className={style.runningBallLink}>
                     <img
-                      src="/chart1.png"
+                      src={chart}
                       alt="chart"
                       className={style.TVIcon}
                     />
-                  </a>
+                  </div>
 
-                  <a href="#" className={style.runningBallLink}>
+                  <div className={style.runningBallLink}>
                     <img
-                      src="/forecast.png"
+                      src={forecast}
                       alt="forecast"
                       className={style.liveIcon}
                     />
-                  </a>
+                  </div>
 
-                  <a href="#" className={style.runningBallLink}>
+                  <div className={style.runningBallLink}>
                     <img
-                      src="/tradein.png"
+                      src={trade}
                       alt="trade"
                       className={style.starIcon}
                     />
-                  </a>
+                  </div>
                 </div>
               </div>
 
@@ -205,14 +214,14 @@ export const SportsbookTable: React.FC = () => {
             ></td>
 
             <td className={classNames(style.bodyCell, style.empty)}>
-              <a href="#" className={style.showMore}>
+              <button className={style.showMore}>
                 <img
-                  src="/right-arrow.png"
+                  src={rightArrow}
                   alt="arrow"
                   className={style.arrowIcon}
                 />
                 8
-              </a>
+              </button>
             </td>
           </tr>
 

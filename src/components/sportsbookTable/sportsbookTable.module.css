@@ -1,38 +1,28 @@
 .container {
-  width: 100%;
   display: flex;
   margin: 10px 0;
 }
 
 .table {
   box-sizing: border-box;
-  width: 802px;
   border-spacing: 0;
-  border-left: 1px solid #ccc;
+  border-left: 1px solid var(--border-white-color);
   font-weight: bold;
 }
 
-.headerFirstRow {
-  height: 20px;
-}
-
-.headerSecondRow {
-  height: 15px;
-}
-
 .headerCell {
-  background-color: #4b6ca4;
-  border-right: 1px solid #355183;
-  border-left: 1px solid #8faee0;
-  border-bottom: 1px solid #355183;
-  border-top: 1px solid #849ec5;
-  color: #fff;
+  background-color: var(--header-cell-color);
+  border-right: 1px solid var(--header-border-dark-blue-color);
+  border-left: 1px solid var(--header-border-light-blue-color);
+  border-bottom: 1px solid var(--header-border-dark-blue-color);
+  border-top: 1px solid var(--header-border-light-blue-color);
+  color: var(--white-color);
   font-size: 12px;
   text-transform: uppercase;
 }
 
 .time {
-  width: 77px;
+  width: 75px;
   text-align: center;
 }
 
@@ -43,72 +33,64 @@
 
 .clearIcon {
   position: absolute;
-  right: 3px;
-}
-
-.fullTime {
-  width: 240px;
-}
-
-.firstHalf {
-  width: 290px;
+  right: 5px;
 }
 
 .hdp {
-  width: 89px;
+  width: 85px;
 }
 
 .ou {
-  width: 102px;
+  width: 95px;
 }
 
 .oneXTwo {
-  width: 49px;
+  width: 45px;
 }
 
 .empty {
-  width: 50px;
+  width: 45px;
 }
 
-.headerRow2 .headerCell {
+.headerSecondRow .headerCell {
   font-size: 10px;
   font-weight: normal;
 }
 
 .bodyRowHeader {
-  height: 22px;
   border: none;
 }
 
 .bodyCellHeader {
-  background-color: #b1b1b1;
+  background-color: var(--header-cell-background-color);
   cursor: pointer;
-  border-bottom: 1px solid #e6c0b2;
-  border-top: 1px solid #f6f7fc;
+  border-bottom: 1px solid var(--cell-border-dark-color);
+  border-top: 1px solid var(--cell-border-light-color);
   padding-left: 20px;
   text-transform: uppercase;
   font-size: 11px;
-  color: #000;
+  color: var(--black-color);
+  padding: 5px;
 }
 
 .bodyCellHeader:last-child {
   padding-left: 30px;
-  border-right: 1px solid #bbb;
+  border-right: 1px solid var(--cell-border-primary-color);
 }
 
 .bodyRow {
-  background-color: rgb(255, 213, 197);
+  background-color: var(--body-row-color);
 }
 
 .bodyRow:hover {
-  background-color: rgb(245, 241, 213);
+  background-color: var(--body-row-hover-color);
 }
 
 .bodyCell {
-  border-bottom: 1px solid #e6c0b2;
-  border-top: 1px solid #f6f7fc;
-  border-left: 1px solid #f6f7fc;
-  border-right: 1px solid #e6c0b2;
+  border-bottom: 1px solid var(--cell-border-dark-color);
+  border-top: 1px solid var(--cell-border-light-color);
+  border-left: 1px solid var(--cell-border-light-color);
+  border-right: 1px solid var(--cell-border-dark-color);
   vertical-align: top;
   font-size: 11px;
   padding: 0 3px;
@@ -116,23 +98,27 @@
 
 .showMore {
   display: block;
-  background-color: #5c7ca6;
-  width: 40px;
-  height: 18px;
+  background-color: var(--showMore-button-background-color);
   border-radius: 2px;
-  margin: 0 auto;
-  margin-top: 2px;
+  margin: 5px auto;
+  padding: 5px 10px;
 
   text-align: center;
   text-decoration: none;
   font-size: 10px;
-  color: #fff;
+  color: var(--white-color);
   line-height: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.showMore:hover {
+  background-color: var(--showMore-button-hover-background-color);
 }
 
 .arrowIcon {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   margin-right: 5px;
 }
 
@@ -147,37 +133,38 @@
 }
 
 .runningBallLink {
-  margin: 2px;
+  margin: 0 5px;
+  cursor: pointer;
 }
 
 .textBlack {
   font-size: 11px;
-  color: #000;
+  color: var(--black-color);
 }
 
 .textGray {
   font-size: 10px;
-  color: #333;
+  color: var(--dark-gray-text-color);
 }
 
 .textRed {
   font-size: 11px;
-  color: #b50000;
+  color: var(--red-text-color);
 }
 
 .textBlue {
   font-size: 11px;
-  color: #022352;
+  color: var(--blue-text-color);
 }
 
 .textDarkGray {
   min-width: 30px;
-  color: #555;
+  color: var(--gray-text-color);
   font-size: 10px;
 }
 
 .textLightGray {
-  color: #999;
+  color: var(--light-gray-text-color);
   font-size: 9px;
 }
 
@@ -188,13 +175,14 @@
 }
 
 .activeNumber {
-  width: 35px;
+  display: flex;
   cursor: pointer;
-  text-align: center;
+  width: 100%;
+  justify-content: flex-end;
 }
 
 .activeNumber:hover {
-  background-color: #ffe00e;
+  background-color: var(--active-number-background-color);
 }
 
 .ouRow {
@@ -220,5 +208,5 @@
 
 .oneXTwoColumn {
   border-left: none;
-  border-right: 2px solid #daac9b;
+  border-right: 2px solid var(--cell-border-dark-color);
 }

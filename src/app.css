@@ -8,10 +8,28 @@
   --border-color: #8194b7;
   --white-color: #fff;
   --black-color: #000;
+  --dark-gray-text-color: #333;
+  --gray-text-color: #555;
+  --light-gray-text-color: #999;
+  --red-text-color:#b50000;
+  --blue-text-color: #022352;
   --active-link-color: #2c4f75;
   --background-yellow-collor: #e1e100;
   --background-blue-color: #4868a1;
   --button-orange-color: #ff9900;
+  --border-white-color: #ccc;
+  --header-cell-color: #4b6ca4;
+  --header-border-dark-blue-color: #355183;
+  --header-border-light-blue-color: #8faee0;
+  --header-cell-background-color: #b1b1b1;
+  --cell-border-dark-color: #e6c0b2;
+  --cell-border-light-color: #f6f7fc;
+  --cell-border-primary-color: #bbb;
+  --body-row-color: rgb(255, 213, 197);
+  --body-row-hover-color: rgb(245, 241, 213);
+  --showMore-button-background-color: #5c7ca6;
+  --showMore-button-hover-background-color: #3da7de;
+  --active-number-background-color: #ffe00e;
 }
 
 body {
