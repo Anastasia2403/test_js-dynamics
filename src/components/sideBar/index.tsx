@@ -1,7 +1,6 @@
-import style from './sideBar.module.css';
+import style from "./sideBar.module.css";
 
 export const SideBar: React.FC = () => {
-
   return (
     <div className={style.sideBar}>
       <div className={style.firstBlock}>
@@ -11,5 +10,5 @@ export const SideBar: React.FC = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

@@ -11,7 +11,7 @@
   --dark-gray-text-color: #333;
   --gray-text-color: #555;
   --light-gray-text-color: #999;
-  --red-text-color:#b50000;
+  --red-text-color: #b50000;
   --blue-text-color: #022352;
   --active-link-color: #2c4f75;
   --background-yellow-collor: #e1e100;
@@ -38,5 +38,5 @@ body {
 
 html {
   font-family: Tahoma, sans-serif;
-  background-color: #E8EFF5;
+  background-color: #e8eff5;
 }

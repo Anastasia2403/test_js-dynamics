@@ -3,27 +3,16 @@ import { Link, NavLink } from "react-router-dom";
 import style from "./header.module.css";
 import classnames from "classnames";
 import { useEffect, useState } from "react";
-import logo from '../../icons/logo.png'
-import question from '../../icons/question-mark.png'
-import chat from '../../icons/chat.png'
-import hot from '../../icons/hot.png'
-import tv from '../../icons/tv.png'
-import search from '../../icons/search.png'
-import arrowUp from '../../icons/arrowhead-up.png'
+import logo from "../../icons/logo.png";
+import question from "../../icons/question-mark.png";
+import chat from "../../icons/chat.png";
+import hot from "../../icons/hot.png";
+import tv from "../../icons/tv.png";
+import search from "../../icons/search.png";
+import arrowUp from "../../icons/arrowhead-up.png";
 
 export const Header: React.FC = () => {
-  const languages = [
-    "English",
-    "中文(简体)",
-    "中文(繁體)",
-    "한국어",
-    "日本語",
-    "ไทย",
-    "Tiếng Việt",
-    "Indonesia",
-    "Português",
-    "España",
-  ];
+  const languages = ["English", "中文(简体)", "中文(繁體)", "한국어", "日本語", "ไทย", "Tiếng Việt", "Indonesia", "Português", "España"];
   const [localTime, setLocalTime] = useState("");
 
   useEffect(() => {
@@ -41,10 +30,7 @@ export const Header: React.FC = () => {
         year: "numeric",
       });
       const timezoneOffset = currentDate.getTimezoneOffset() / -60;
-      const timezoneString =
-        timezoneOffset >= 0
-          ? `GMT +${timezoneOffset}`
-          : `GMT ${timezoneOffset}`;
+      const timezoneString = timezoneOffset >= 0 ? `GMT +${timezoneOffset}` : `GMT ${timezoneOffset}`;
       const localTime = `${localTimeString} ${localDateString} ${timezoneString}`;
       setLocalTime(localTime);
     }, 1000);
@@ -62,22 +48,14 @@ export const Header: React.FC = () => {
           <div className={style.menuTop}>
             <div className={style.action}>
               <Link to="https://www.cmd328.com/main/static.aspx?q=faq.html" className={style.actionLink} target="_blank">
-                <img
-                  src={question}
-                  alt="question"
-                  className={style.actionIconQuestion}
-                ></img>
+                <img src={question} alt="question" className={style.actionIconQuestion}></img>
                 Help
               </Link>
             </div>
 
             <div className={style.action}>
               <Link to="https://www.cmd328.com/main/livechat.aspx" className={style.actionLink} target="_blank">
-                <img
-                  src={chat}
-                  alt="chat"
-                  className={style.actionIconConversation}
-                ></img>
+                <img src={chat} alt="chat" className={style.actionIconConversation}></img>
                 Live Chat
               </Link>
             </div>
@@ -116,11 +94,7 @@ export const Header: React.FC = () => {
                       })
                     }
                   >
-                    <img
-                      src={hot}
-                      alt="hot"
-                      className={style.navLinkIcon}
-                    />
+                    <img src={hot} alt="hot" className={style.navLinkIcon} />
                     E-Sports
                   </NavLink>
                 </li>
@@ -133,11 +107,7 @@ export const Header: React.FC = () => {
                       })
                     }
                   >
-                    <img
-                      src={hot}
-                      alt="hot"
-                      className={style.navLinkIcon}
-                    />
+                    <img src={hot} alt="hot" className={style.navLinkIcon} />
                     Virtual Sports
                   </NavLink>
                 </li>
@@ -162,11 +132,7 @@ export const Header: React.FC = () => {
                       })
                     }
                   >
-                    <img
-                      src={hot}
-                      alt="hot"
-                      className={style.navLinkIcon}
-                    />
+                    <img src={hot} alt="hot" className={style.navLinkIcon} />
                     Casino
                   </NavLink>
                 </li>
@@ -179,11 +145,7 @@ export const Header: React.FC = () => {
                       })
                     }
                   >
-                    <img
-                      src={hot}
-                      alt="hot"
-                      className={style.navLinkIcon}
-                    />
+                    <img src={hot} alt="hot" className={style.navLinkIcon} />
                     Games
                   </NavLink>
                 </li>
@@ -196,11 +158,7 @@ export const Header: React.FC = () => {
                       })
                     }
                   >
-                    <img
-                      src={hot}
-                      alt="hot"
-                      className={style.navLinkIcon}
-                    />
+                    <img src={hot} alt="hot" className={style.navLinkIcon} />
                     Keno
                   </NavLink>
                 </li>
@@ -215,11 +173,7 @@ export const Header: React.FC = () => {
           <div className={style.news}>
             <div className={style.announcements}>
               <Link to="https://www.cmd328.com/member/news/commnewslist.aspx" className={style.announcementsLink} target="_blank">
-                <img
-                  src={tv}
-                  alt="tv"
-                  className={style.announcementsIcon}
-                />
+                <img src={tv} alt="tv" className={style.announcementsIcon} />
                 Announcements
               </Link>
               <div className={style.announcementsCount}>270</div>
@@ -233,17 +187,9 @@ export const Header: React.FC = () => {
           </div>
           <div className={style.search}>
             <div className={style.searchTeam}>
-              <input
-                type="text"
-                className={style.searchInput}
-                placeholder="Search Team"
-              />
+              <input type="text" className={style.searchInput} placeholder="Search Team" />
               <div className={style.searchButton}>
-                <img
-                  src={search}
-                  alt="search"
-                  className={style.searchIcon}
-                />
+                <img src={search} alt="search" className={style.searchIcon} />
               </div>
             </div>
             <Link className={style.headerButton} to="https://www.cmd328.com/member/betsview/betlist.aspx" target="_blank">
@@ -263,11 +209,7 @@ export const Header: React.FC = () => {
         <div className={style.miniGameContainer}>
           <div className={style.miniGameTitle}>Mini Game</div>
           <div className={style.miniGameButton}>
-            <img
-              src={arrowUp}
-              alt="arrowhead-up"
-              className={style.miniGameButtonIcon}
-            />
+            <img src={arrowUp} alt="arrowhead-up" className={style.miniGameButtonIcon} />
           </div>
         </div>
       </div>

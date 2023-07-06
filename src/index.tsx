@@ -3,7 +3,6 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import { App } from "./app";
 import { SportsbookTable } from "./components/sportsbookTable";
 
-
 ReactDom.render(
   <HashRouter>
     <Routes>

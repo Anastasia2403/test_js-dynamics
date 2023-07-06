@@ -246,7 +246,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--background-blue-color) ;
+  background-color: var(--background-blue-color);
   border-left: 2px solid var(--background-blue-color);
   cursor: pointer;
 }
