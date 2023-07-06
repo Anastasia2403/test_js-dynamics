@@ -56,7 +56,7 @@ export const Header: React.FC = () => {
             <div className={style.action}>
               <NavLink to="/help" className={style.actionLink}>
                 <img
-                  src="/Question_mark_white_icon.png"
+                  src="/question-mark.png"
                   alt="question"
                   className={style.actionIconQuestion}
                 ></img>
@@ -138,7 +138,7 @@ export const Header: React.FC = () => {
                   <NavLink
                     to="/4d"
                     className={({ isActive }) =>
-                      classnames(style.navLink, {
+                      classnames(style.navLink, style.navLinkFourD, {
                         [style.navLinkActive]: isActive,
                       })
                     }
@@ -255,13 +255,13 @@ export const Header: React.FC = () => {
         </div>
         <div className={style.miniGameContainer}>
           <div className={style.miniGameTitle}>Mini Game</div>
-          <a className={style.miniGameButton} href="#">
+          <div className={style.miniGameButton}>
             <img
               src="/arrowhead-up.png"
               alt="arrowhead-up"
               className={style.miniGameButtonIcon}
             />
-          </a>
+          </div>
         </div>
       </div>
     </header>
