@@ -3,6 +3,13 @@ import { Link, NavLink } from "react-router-dom";
 import style from "./header.module.css";
 import classnames from "classnames";
 import { useEffect, useState } from "react";
+import logo from '../../icons/logo.png'
+import question from '../../icons/question-mark.png'
+import chat from '../../icons/chat.png'
+import hot from '../../icons/hot.png'
+import tv from '../../icons/tv.png'
+import search from '../../icons/search.png'
+import arrowUp from '../../icons/arrowhead-up.png'
 
 export const Header: React.FC = () => {
   const languages = [
@@ -49,14 +56,14 @@ export const Header: React.FC = () => {
     <header className={style.header}>
       <div className={style.headerTop}>
         <div className={style.headerTopLogo}>
-          <img src="/logo.png" alt="logo"></img>
+          <img src={logo} alt="logo" className={style.logo}></img>
         </div>
         <div className={`${style.headerTopMenu} ${style.menu}`}>
           <div className={style.menuTop}>
             <div className={style.action}>
               <Link to="https://www.cmd328.com/main/static.aspx?q=faq.html" className={style.actionLink} target="_blank">
                 <img
-                  src="/question-mark.png"
+                  src={question}
                   alt="question"
                   className={style.actionIconQuestion}
                 ></img>
@@ -67,7 +74,7 @@ export const Header: React.FC = () => {
             <div className={style.action}>
               <Link to="https://www.cmd328.com/main/livechat.aspx" className={style.actionLink} target="_blank">
                 <img
-                  src="/chat.png"
+                  src={chat}
                   alt="chat"
                   className={style.actionIconConversation}
                 ></img>
@@ -110,7 +117,7 @@ export const Header: React.FC = () => {
                     }
                   >
                     <img
-                      src="/hot.png"
+                      src={hot}
                       alt="hot"
                       className={style.navLinkIcon}
                     />
@@ -127,7 +134,7 @@ export const Header: React.FC = () => {
                     }
                   >
                     <img
-                      src="/hot.png"
+                      src={hot}
                       alt="hot"
                       className={style.navLinkIcon}
                     />
@@ -156,7 +163,7 @@ export const Header: React.FC = () => {
                     }
                   >
                     <img
-                      src="/hot.png"
+                      src={hot}
                       alt="hot"
                       className={style.navLinkIcon}
                     />
@@ -173,7 +180,7 @@ export const Header: React.FC = () => {
                     }
                   >
                     <img
-                      src="/hot.png"
+                      src={hot}
                       alt="hot"
                       className={style.navLinkIcon}
                     />
@@ -190,7 +197,7 @@ export const Header: React.FC = () => {
                     }
                   >
                     <img
-                      src="/hot.png"
+                      src={hot}
                       alt="hot"
                       className={style.navLinkIcon}
                     />
@@ -209,7 +216,7 @@ export const Header: React.FC = () => {
             <div className={style.announcements}>
               <Link to="https://www.cmd328.com/member/news/commnewslist.aspx" className={style.announcementsLink} target="_blank">
                 <img
-                  src="/tv.png"
+                  src={tv}
                   alt="tv"
                   className={style.announcementsIcon}
                 />
@@ -233,7 +240,7 @@ export const Header: React.FC = () => {
               />
               <div className={style.searchButton}>
                 <img
-                  src="/search.png"
+                  src={search}
                   alt="search"
                   className={style.searchIcon}
                 />
@@ -257,7 +264,7 @@ export const Header: React.FC = () => {
           <div className={style.miniGameTitle}>Mini Game</div>
           <div className={style.miniGameButton}>
             <img
-              src="/arrowhead-up.png"
+              src={arrowUp}
               alt="arrowhead-up"
               className={style.miniGameButtonIcon}
             />

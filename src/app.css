@@ -1,3 +1,19 @@
+:root {
+  --light-blue: #e8eff5;
+  --primary-blue: #3f5d91;
+  --accent-color: #ff4e00;
+  --dark-blue: #19406a;
+  --hover-color: #ffbb00;
+  --icon-background: #6e86ae;
+  --border-color: #8194b7;
+  --white-color: #fff;
+  --black-color: #000;
+  --active-link-color: #2c4f75;
+  --background-yellow-collor: #e1e100;
+  --background-blue-color: #4868a1;
+  --button-orange-color: #ff9900;
+}
+
 body {
   margin: 0;
 }
