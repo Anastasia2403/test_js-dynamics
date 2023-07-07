@@ -1,0 +1,190 @@
+.container {
+  display: flex;
+  margin: 10px 0;
+}
+
+.table {
+  border-spacing: 0;
+  border-left: 1px solid var(--primary-gray);
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.headerCell {
+  background-color: var(--blue-300);
+  border-right: 1px solid var(--blue-400);
+  border-left: 1px solid var(--blue-200);
+  border-bottom: 1px solid var(--blue-400);
+  border-top: 1px solid var(--blue-200);
+  color: var(--primary-white);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.time {
+  text-align: center;
+  padding: 0 5px;
+}
+
+.runningBall {
+  position: relative;
+}
+
+.clearIcon {
+  position: absolute;
+  right: 5px;
+}
+
+.hdp {
+  min-width: 85px;
+}
+
+.ou {
+  min-width: 95px;
+}
+
+.headerRow .headerCell {
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.bodyCellHeader {
+  background-color: var(--primary-gray);
+  cursor: pointer;
+  border-bottom: 1px solid var(--dark-table);
+  border-top: 1px solid var(--secondary-white);
+  text-transform: uppercase;
+  color: var(--black-color);
+  padding: 5px 10px;
+}
+
+.bodyCellHeader:last-child {
+  text-align: right;
+  border-right: 1px solid var(--primary-gray);
+}
+
+.refreshButton {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.bodyRow {
+  background-color: var(--primary-table);
+}
+
+.bodyRow:hover {
+  background-color: var(--light-table);
+}
+
+.bodyCell {
+  border-bottom: 1px solid var(--dark-table);
+  border-top: 1px solid var(--light-table);
+  border-left: 1px solid var(--light-table);
+  border-right: 1px solid var(--dark-table);
+  vertical-align: top;
+  padding: 0 3px;
+}
+
+.showMore {
+  display: block;
+  background-color: var(--blue-300);
+  border-radius: 2px;
+  margin: 5px auto;
+  padding: 5px 10px;
+
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  color: var(--primary-white);
+  line-height: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.showMore:hover {
+  background-color: var(--bright-blue);
+}
+
+.arrowIcon {
+  width: 7px;
+  height: 7px;
+  margin-right: 5px;
+}
+
+.runningBallRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.runningBallLink {
+  margin: 0 5px;
+}
+
+.textBlack {
+  color: var(--black-color);
+}
+
+.textGray {
+  font-size: 10px;
+  color: var(--dark-gray);
+}
+
+.textRed {
+  color: var(--red-color);
+}
+
+.textBlue {
+  color: var(--blue-600);
+}
+
+.textDarkGray {
+  min-width: 30px;
+  color: var(--secondery-gray);
+  font-size: 10px;
+}
+
+.textLightGray {
+  color: var(--primary-gray);
+  font-size: 9px;
+}
+
+.hdpRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.activeNumber {
+  cursor: pointer;
+  min-width: 30px;
+  text-align: right;
+}
+
+.activeNumber:hover {
+  background-color: var(--secondary-yellow);
+}
+
+.ouRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.oneXTwoRow {
+  margin-bottom: 5px;
+}
+
+.hdpColumn {
+  border-right: none;
+}
+
+.ouColumn {
+  border-right: none;
+  border-left: none;
+}
+
+.oneXTwoColumn {
+  border-left: none;
+  border-right: 2px solid var(--dark-table);
+}
