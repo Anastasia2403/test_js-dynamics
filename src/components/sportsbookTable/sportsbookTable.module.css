@@ -22,13 +22,12 @@
 }
 
 .time {
-  min-width: 75px;
   text-align: center;
+  padding: 0 5px;
 }
 
 .runningBall {
   position: relative;
-  min-width: 195px;
 }
 
 .clearIcon {
@@ -42,14 +41,6 @@
 
 .ou {
   min-width: 95px;
-}
-
-.oneXTwo {
-  min-width: 45px;
-}
-
-.empty {
-  min-width: 45px;
 }
 
 .headerRow .headerCell {
@@ -124,11 +115,6 @@
 .runningBallRow {
   display: flex;
   justify-content: space-between;
-}
-
-.linkBlock {
-  display: flex;
-  align-items: center;
 }
 
 .runningBallLink {

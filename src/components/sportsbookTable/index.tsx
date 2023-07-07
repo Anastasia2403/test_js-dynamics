@@ -29,11 +29,11 @@ export const SportsbookTable: React.FC = () => {
               <img src={clear} alt="clear" className={style.clearIcon} />
             </th>
 
-            <th className={classNames(style.headerCell, style.fullTime)} colSpan={3}>
+            <th className={classNames(style.headerCell)} colSpan={3}>
               full time
             </th>
 
-            <th className={classNames(style.headerCell, style.firstHalf)} colSpan={4}>
+            <th className={classNames(style.headerCell)} colSpan={4}>
               first half
             </th>
           </tr>
@@ -43,15 +43,15 @@ export const SportsbookTable: React.FC = () => {
 
             <th className={classNames(style.headerCell, style.ou)}>O/U</th>
 
-            <th className={classNames(style.headerCell, style.oneXTwo)}>1x2</th>
+            <th className={classNames(style.headerCell)}>1x2</th>
 
             <th className={classNames(style.headerCell, style.hdp)}>HDP</th>
 
             <th className={classNames(style.headerCell, style.ou)}>O/U</th>
 
-            <th className={classNames(style.headerCell, style.oneXTwo)}>1x2</th>
+            <th className={classNames(style.headerCell)}>1x2</th>
 
-            <th className={classNames(style.headerCell, style.empty)}></th>
+            <th className={classNames(style.headerCell)}></th>
           </tr>
         </thead>
         <tbody>
@@ -73,11 +73,11 @@ export const SportsbookTable: React.FC = () => {
               <p className={style.textBlue}>HT</p>
             </td>
 
-            <td className={classNames(style.bodyCell, style.runningBall)}>
+            <td className={classNames(style.bodyCell)}>
               <div className={style.runningBallRow}>
                 <p className={style.textRed}>Port melporne sharks</p>
 
-                <div className={style.linkBlock}>
+                <div>
                   <Link to="#" className={style.runningBallLink}>
                     <img src={televisionOn} alt="tv" className={style.TVIcon} />
                   </Link>
@@ -95,7 +95,7 @@ export const SportsbookTable: React.FC = () => {
               <div className={style.runningBallRow}>
                 <p className={style.textBlue}>Heidelberg United</p>
 
-                <div className={style.linkBlock}>
+                <div>
                   <Link to="#" className={style.runningBallLink}>
                     <img src={chart} alt="chart" className={style.TVIcon} />
                   </Link>
@@ -141,7 +141,7 @@ export const SportsbookTable: React.FC = () => {
               </div>
             </td>
 
-            <td className={classNames(style.bodyCell, style.oneXTwo, style.oneXTwoColumn)}>
+            <td className={classNames(style.bodyCell, style.oneXTwoColumn)}>
               <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}>2.44</p>
 
               <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}>3.25</p>
@@ -149,9 +149,9 @@ export const SportsbookTable: React.FC = () => {
               <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}>2.62</p>
             </td>
 
-            <td className={classNames(style.bodyCell, style.firstHalf)} colSpan={3}></td>
+            <td className={classNames(style.bodyCell)} colSpan={3}></td>
 
-            <td className={classNames(style.bodyCell, style.empty)}>
+            <td className={classNames(style.bodyCell)}>
               <button className={style.showMore}>
                 <img src={rightArrow} alt="arrow" className={style.arrowIcon} />8
               </button>
@@ -161,7 +161,7 @@ export const SportsbookTable: React.FC = () => {
           <tr className={style.bodyRow}>
             <td className={classNames(style.bodyCell, style.time)}></td>
 
-            <td className={classNames(style.bodyCell, style.runningBall)}></td>
+            <td className={classNames(style.bodyCell)}></td>
 
             <td className={classNames(style.bodyCell, style.hdp, style.hdpColumn)}>
               <div className={style.hdpRow}>
@@ -189,7 +189,7 @@ export const SportsbookTable: React.FC = () => {
               </div>
             </td>
 
-            <td className={classNames(style.bodyCell, style.oneXTwo, style.oneXTwoColumn)}>
+            <td className={classNames(style.bodyCell, style.oneXTwoColumn)}>
               <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}></p>
 
               <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}></p>
@@ -197,15 +197,15 @@ export const SportsbookTable: React.FC = () => {
               <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}></p>
             </td>
 
-            <td className={classNames(style.bodyCell, style.firstHalf)} colSpan={3}></td>
+            <td className={classNames(style.bodyCell)} colSpan={3}></td>
 
-            <td className={classNames(style.bodyCell, style.empty)}></td>
+            <td className={classNames(style.bodyCell)}></td>
           </tr>
 
           <tr className={style.bodyRow}>
             <td className={classNames(style.bodyCell, style.time)}></td>
 
-            <td className={classNames(style.bodyCell, style.runningBall)}></td>
+            <td className={classNames(style.bodyCell)}></td>
 
             <td className={classNames(style.bodyCell, style.hdp, style.hdpColumn)}>
               <div className={style.hdpRow}>
@@ -233,7 +233,7 @@ export const SportsbookTable: React.FC = () => {
               </div>
             </td>
 
-            <td className={classNames(style.bodyCell, style.oneXTwo, style.oneXTwoColumn)}>
+            <td className={classNames(style.bodyCell, style.oneXTwoColumn)}>
               <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}></p>
 
               <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}></p>
@@ -241,9 +241,9 @@ export const SportsbookTable: React.FC = () => {
               <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}></p>
             </td>
 
-            <td className={classNames(style.bodyCell, style.firstHalf)} colSpan={3}></td>
+            <td className={classNames(style.bodyCell)} colSpan={3}></td>
 
-            <td className={classNames(style.bodyCell, style.empty)}></td>
+            <td className={classNames(style.bodyCell)}></td>
           </tr>
         </tbody>
       </table>
