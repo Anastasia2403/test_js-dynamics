@@ -1,39 +1,39 @@
 .header {
   display: flex;
   flex-direction: column;
-  background-color: var(--light-blue);
+  font-size: 11px;
+  font-weight: 700;
 }
 
 .headerTop {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .headerTopLogo {
   margin: 5px 60px 5px 10px;
 }
 
-.headerBottom {
-  display: flex;
-  align-items: center;
-  background-color: var(--primary-blue);
+.headerTopContainer {
+  flex: 1;
 }
 
 .menuTop {
-  box-sizing: border-box;
+  max-width: 840px;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  margin-left: 460px;
   margin-top: 5px;
 }
 
 .action {
   margin-right: 20px;
   font-size: 12px;
-  font-weight: bold;
 }
 
 .actionIconQuestion {
-  background-color: var(--icon-background);
+  background-color: var(--blue-200);
   width: 11px;
   height: 11px;
   padding: 1px 2px;
@@ -49,86 +49,69 @@
 .actionLink {
   display: flex;
   text-align: center;
-  color: var(--dark-blue);
+  align-items: center;
+  color: var(--blue-500);
   text-decoration: none;
 }
 
 .actionLink:hover {
-  color: var(--accent-color);
+  color: var(--orange-color);
 }
 
 .languageSelect {
   margin-right: 5px;
   padding: 5px 15px 5px 5px;
-
   font-family: Tahoma, sans-serif;
-  font-size: 11px;
-  font-weight: bold;
-  color: var(--dark-blue);
-
-  border: 1px solid var(--border-color);
+  color: var(--blue-500);
+  font-weight: 700;
+  border: 1px solid var(--blue-200);
   border-radius: 2px;
-
   cursor: pointer;
 }
 
 .logoutButton {
-  background-color: var(--dark-blue);
-  border: 1px solid var(--border-color);
+  background-color: var(--blue-400);
+  border: 1px solid var(--blue-200);
   border-radius: 2px;
-
   padding: 5px 30px;
-
   font-family: Tahoma, sans-serif;
-  font-size: 11px;
-  color: var(--white-color);
-  font-weight: bold;
-
+  color: var(--primary-white);
+  font-weight: 700;
   cursor: pointer;
 }
 
-.menuBottom {
+.navigation {
   display: flex;
-  padding-top: 5px;
-  padding-left: 10px;
-}
-
-.navList {
-  display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5px 0;
   gap: 5px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.navItem :hover {
-  color: var(--white-color);
-  background-color: #2c4f75;
-  border-radius: 15px;
 }
 
 .navLink {
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 0 10px;
   text-transform: uppercase;
   font-size: 12px;
-  font-weight: bold;
   color: var(--black-color);
   text-decoration: none;
   line-height: 25px;
 }
 
-.navLinkFourD {
+.navLink:nth-child(4) {
   padding: 0 30px;
 }
 
+.navLink:hover {
+  color: var(--primary-white);
+  background-color: var(--blue-500);
+  border-radius: 15px;
+}
+
 .navLinkActive {
-  color: var(--white-color);
-  background-color: var(--active-link-color);
+  color: var(--primary-white);
+  background-color: var(--blue-500);
   border-radius: 15px;
 }
 
@@ -138,16 +121,32 @@
   margin-right: 5px;
 }
 
+.headerBottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--blue-400);
+}
+
+.headerBottomContainer {
+  max-width: 850px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  justify-content: space-between;
+}
+
 .time {
   font-size: 10px;
-  color: var(--white-color);
-  padding: 0 10px;
-  margin-right: 30px;
+  color: var(--primary-white);
+  padding-right: 30px;
+  padding-left: 5px;
 }
 
 .news {
   display: flex;
-  margin-right: 155px;
+  align-items: center;
 }
 
 .announcements {
@@ -159,14 +158,12 @@
 .announcementsLink {
   display: flex;
   align-items: center;
-  font-size: 11px;
-  color: var(--white-color);
-  font-weight: 700;
+  color: var(--primary-white);
   text-decoration: none;
 }
 
 .announcementsLink:hover {
-  color: var(--hover-color);
+  color: var(--primary-yellow);
 }
 
 .announcementsIcon {
@@ -180,37 +177,28 @@
   padding: 0 2px;
   top: 2px;
   right: 0;
-
   font-size: 8px;
   font-weight: 600;
-  color: var(--accent-color);
-  background: var(--background-yellow-collor);
+  color: var(--orange-color);
+  background: var(--secondary-yellow);
   border-radius: 5px;
 }
 
 .msg {
   display: flex;
   align-items: center;
-  font-size: 11px;
-  color: var(--white-color);
+  color: var(--primary-white);
   margin: 0 5px;
 }
 
 .msgLink {
-  font-size: 11px;
-  color: var(--white-color);
-  font-weight: 700;
+  color: var(--primary-white);
   text-decoration: none;
   margin-left: 5px;
 }
 
 .msgLink:hover {
-  color: var(--hover-color);
-}
-
-.headerBottomContainer {
-  margin: 5px 0;
-  display: flex;
+  color: var(--primary-yellow);
 }
 
 .search {
@@ -223,14 +211,14 @@
 .searchTeam {
   display: flex;
   align-items: center;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--blue-200);
   border-radius: 3px;
 }
 
 .searchInput {
   padding: 2px 10px;
-  width: 80px;
-  border: 0 none;
+  max-width: 90px;
+  border: none;
   font-size: 12px;
   border-radius: 3px 0 0 3px;
 }
@@ -238,50 +226,49 @@
 .searchIcon {
   width: 12px;
   height: 12px;
-  padding: 3px 5px;
+  margin: 3px 5px;
 }
 
 .searchButton {
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--background-blue-color);
-  border-left: 2px solid var(--background-blue-color);
+  background-color: var(--blue-300);
+  border: 0;
+  border-left: 2px solid var(--blue-300);
+  padding: 0;
   cursor: pointer;
 }
 
 .searchButton:hover {
-  background-color: var(--button-orange-color);
+  background-color: var(--orange-color);
 }
 
 .headerButton {
   display: block;
   padding: 0 10px;
-  background-color: var(--background-blue-color);
-  border: 1px solid var(--border-color);
+  background-color: var(--blue-300);
+  border: 1px solid var(--blue-200);
   border-radius: 3px;
-  color: var(--white-color);
-  font-size: 11px;
-  font-weight: 700;
+  color: var(--primary-white);
   line-height: 17px;
   text-decoration: none;
   cursor: pointer;
 }
 
 .headerButton:hover {
-  background-color: var(--button-orange-color);
+  background-color: var(--orange-color);
 }
 
 .miniGameContainer {
+  width: 15%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .miniGameTitle {
-  color: var(--white-color);
-  margin-right: 170px;
-  font-weight: bold;
+  color: var(--primary-white);
   font-size: 12px;
 }
 
@@ -289,10 +276,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 13px;
-  height: 13px;
-  background-color: var(--background-blue-color);
-  border: 2px solid var(--border-color);
+  width: 15px;
+  height: 15px;
+  background-color: var(--blue-300);
+  border: 2px solid var(--blue-200);
   border-radius: 10px;
+  padding: 0;
   cursor: pointer;
 }

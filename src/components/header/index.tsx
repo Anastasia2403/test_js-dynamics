@@ -44,7 +44,7 @@ export const Header: React.FC = () => {
         <div className={style.headerTopLogo}>
           <img src={logo} alt="logo" className={style.logo}></img>
         </div>
-        <div className={`${style.headerTopMenu} ${style.menu}`}>
+        <div className={style.headerTopContainer}>
           <div className={style.menuTop}>
             <div className={style.action}>
               <Link to="https://www.cmd328.com/main/static.aspx?q=faq.html" className={style.actionLink} target="_blank">
@@ -70,101 +70,83 @@ export const Header: React.FC = () => {
 
             <button className={style.logoutButton}>Logout</button>
           </div>
-          <div className={style.menuBottom}>
-            <nav className={style.nav}>
-              <ul className={style.navList}>
-                <li className={style.navItem}>
-                  <NavLink
-                    to="/sportsbook"
-                    className={({ isActive }) =>
-                      classnames(style.navLink, {
-                        [style.navLinkActive]: isActive,
-                      })
-                    }
-                  >
-                    Sportsbook
-                  </NavLink>
-                </li>
-                <li className={style.navItem}>
-                  <NavLink
-                    to="/e-sports"
-                    className={({ isActive }) =>
-                      classnames(style.navLink, {
-                        [style.navLinkActive]: isActive,
-                      })
-                    }
-                  >
-                    <img src={hot} alt="hot" className={style.navLinkIcon} />
-                    E-Sports
-                  </NavLink>
-                </li>
-                <li className={style.navItem}>
-                  <NavLink
-                    to="/virtual-sports"
-                    className={({ isActive }) =>
-                      classnames(style.navLink, {
-                        [style.navLinkActive]: isActive,
-                      })
-                    }
-                  >
-                    <img src={hot} alt="hot" className={style.navLinkIcon} />
-                    Virtual Sports
-                  </NavLink>
-                </li>
-                <li className={style.navItem}>
-                  <NavLink
-                    to="/4d"
-                    className={({ isActive }) =>
-                      classnames(style.navLink, style.navLinkFourD, {
-                        [style.navLinkActive]: isActive,
-                      })
-                    }
-                  >
-                    4D
-                  </NavLink>
-                </li>
-                <li className={style.navItem}>
-                  <NavLink
-                    to="/casino"
-                    className={({ isActive }) =>
-                      classnames(style.navLink, {
-                        [style.navLinkActive]: isActive,
-                      })
-                    }
-                  >
-                    <img src={hot} alt="hot" className={style.navLinkIcon} />
-                    Casino
-                  </NavLink>
-                </li>
-                <li className={style.navItem}>
-                  <NavLink
-                    to="/games"
-                    className={({ isActive }) =>
-                      classnames(style.navLink, {
-                        [style.navLinkActive]: isActive,
-                      })
-                    }
-                  >
-                    <img src={hot} alt="hot" className={style.navLinkIcon} />
-                    Games
-                  </NavLink>
-                </li>
-                <li className={style.navItem}>
-                  <NavLink
-                    to="/keno"
-                    className={({ isActive }) =>
-                      classnames(style.navLink, {
-                        [style.navLinkActive]: isActive,
-                      })
-                    }
-                  >
-                    <img src={hot} alt="hot" className={style.navLinkIcon} />
-                    Keno
-                  </NavLink>
-                </li>
-              </ul>
-            </nav>
-          </div>
+          <nav className={style.navigation}>
+            <NavLink
+              to="/sportsbook"
+              className={({ isActive }) =>
+                classnames(style.navLink, {
+                  [style.navLinkActive]: isActive,
+                })
+              }
+            >
+              Sportsbook
+            </NavLink>
+            <NavLink
+              to="/e-sports"
+              className={({ isActive }) =>
+                classnames(style.navLink, {
+                  [style.navLinkActive]: isActive,
+                })
+              }
+            >
+              <img src={hot} alt="hot" className={style.navLinkIcon} />
+              E-Sports
+            </NavLink>
+            <NavLink
+              to="/virtual-sports"
+              className={({ isActive }) =>
+                classnames(style.navLink, {
+                  [style.navLinkActive]: isActive,
+                })
+              }
+            >
+              <img src={hot} alt="hot" className={style.navLinkIcon} />
+              Virtual Sports
+            </NavLink>
+            <NavLink
+              to="/4d"
+              className={({ isActive }) =>
+                classnames(style.navLink, {
+                  [style.navLinkActive]: isActive,
+                })
+              }
+            >
+              4D
+            </NavLink>
+            <NavLink
+              to="/casino"
+              className={({ isActive }) =>
+                classnames(style.navLink, {
+                  [style.navLinkActive]: isActive,
+                })
+              }
+            >
+              <img src={hot} alt="hot" className={style.navLinkIcon} />
+              Casino
+            </NavLink>
+            <NavLink
+              to="/games"
+              className={({ isActive }) =>
+                classnames(style.navLink, {
+                  [style.navLinkActive]: isActive,
+                })
+              }
+            >
+              <img src={hot} alt="hot" className={style.navLinkIcon} />
+              Games
+            </NavLink>
+            <NavLink
+              to="/keno"
+              className={({ isActive }) =>
+                classnames(style.navLink, {
+                  [style.navLinkActive]: isActive,
+                })
+              }
+            >
+              <img src={hot} alt="hot" className={style.navLinkIcon} />
+              Keno
+            </NavLink>
+          </nav>
         </div>
       </div>
       <div className={style.headerBottom}>
@@ -188,9 +170,9 @@ export const Header: React.FC = () => {
           <div className={style.search}>
             <div className={style.searchTeam}>
               <input type="text" className={style.searchInput} placeholder="Search Team" />
-              <div className={style.searchButton}>
+              <button className={style.searchButton}>
                 <img src={search} alt="search" className={style.searchIcon} />
-              </div>
+              </button>
             </div>
             <Link className={style.headerButton} to="https://www.cmd328.com/member/betsview/betlist.aspx" target="_blank">
               Bet List
@@ -208,9 +190,9 @@ export const Header: React.FC = () => {
         </div>
         <div className={style.miniGameContainer}>
           <div className={style.miniGameTitle}>Mini Game</div>
-          <div className={style.miniGameButton}>
+          <button className={style.miniGameButton}>
             <img src={arrowUp} alt="arrowhead-up" className={style.miniGameButtonIcon} />
-          </div>
+          </button>
         </div>
       </div>
     </header>

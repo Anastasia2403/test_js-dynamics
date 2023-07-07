@@ -11,6 +11,7 @@ import chart from "../../icons/chart1.png";
 import forecast from "../../icons/forecast.png";
 import trade from "../../icons/tradein.png";
 import rightArrow from "../../icons/right-arrow.png";
+import { Link } from "react-router-dom";
 
 export const SportsbookTable: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ export const SportsbookTable: React.FC = () => {
       <SideBar />
       <table className={style.table}>
         <thead>
-          <tr className={style.headerFirstRow}>
+          <tr>
             <th className={classNames(style.headerCell, style.time)} rowSpan={2}>
               Time
             </th>
@@ -37,7 +38,7 @@ export const SportsbookTable: React.FC = () => {
             </th>
           </tr>
 
-          <tr className={style.headerSecondRow}>
+          <tr className={style.headerRow}>
             <th className={classNames(style.headerCell, style.hdp)}>HDP</th>
 
             <th className={classNames(style.headerCell, style.ou)}>O/U</th>
@@ -54,100 +55,98 @@ export const SportsbookTable: React.FC = () => {
           </tr>
         </thead>
         <tbody>
-          <tr className={style.bodyRowHeader}>
+          <tr>
             <td className={style.bodyCellHeader} colSpan={8}>
               Australia victoria premier league
             </td>
 
             <td className={style.bodyCellHeader}>
-              <img src={refresh} alt="refresh" />
+              <button className={style.refreshButton}>
+                <img src={refresh} alt="refresh" />
+              </button>
             </td>
           </tr>
 
           <tr className={style.bodyRow}>
             <td className={classNames(style.bodyCell, style.time)}>
-              <div className={style.textBlack}>0 : 0</div>
-              <div className={style.textBlue}>HT</div>
+              <p className={style.textBlack}>0 : 0</p>
+              <p className={style.textBlue}>HT</p>
             </td>
 
             <td className={classNames(style.bodyCell, style.runningBall)}>
               <div className={style.runningBallRow}>
-                <div className={style.textRed}>Port melporne sharks</div>
+                <p className={style.textRed}>Port melporne sharks</p>
 
                 <div className={style.linkBlock}>
-                  <div className={style.runningBallLink}>
+                  <Link to="#" className={style.runningBallLink}>
                     <img src={televisionOn} alt="tv" className={style.TVIcon} />
-                  </div>
+                  </Link>
 
-                  <div className={style.runningBallLink}>
+                  <Link to="#" className={style.runningBallLink}>
                     <img src={lc} alt="live" className={style.liveIcon} />
-                  </div>
+                  </Link>
 
-                  <div className={style.runningBallLink}>
+                  <Link to="#" className={style.runningBallLink}>
                     <img src={uncheck} alt="star" className={style.starIcon} />
-                  </div>
+                  </Link>
                 </div>
               </div>
 
               <div className={style.runningBallRow}>
-                <div className={style.textBlue}>Heidelberg United</div>
+                <p className={style.textBlue}>Heidelberg United</p>
 
                 <div className={style.linkBlock}>
-                  <div className={style.runningBallLink}>
+                  <Link to="#" className={style.runningBallLink}>
                     <img src={chart} alt="chart" className={style.TVIcon} />
-                  </div>
+                  </Link>
 
-                  <div className={style.runningBallLink}>
+                  <Link to="#" className={style.runningBallLink}>
                     <img src={forecast} alt="forecast" className={style.liveIcon} />
-                  </div>
+                  </Link>
 
-                  <div className={style.runningBallLink}>
+                  <Link to="#" className={style.runningBallLink}>
                     <img src={trade} alt="trade" className={style.starIcon} />
-                  </div>
+                  </Link>
                 </div>
               </div>
 
-              <div className={style.textGray}>Draw</div>
+              <div className={style.runningBallRow}>
+                <p className={style.textGray}>Draw</p>
+              </div>
             </td>
 
             <td className={classNames(style.bodyCell, style.hdp, style.hdpColumn)}>
               <div className={style.hdpRow}>
-                <div className={style.textDarkGrey}>0/-0.5</div>
-                <div className={classNames(style.textRed, style.activeNumber)}>-0.96</div>
+                <p className={style.textDarkGrey}>0/-0.5</p>
+                <p className={classNames(style.textRed, style.activeNumber)}>-0.96</p>
               </div>
 
               <div className={style.hdpRow}>
-                <div className={style.textDarkGrey}></div>
-                <div className={classNames(style.textBlack, style.activeNumber)}>0.84</div>
+                <p className={style.textDarkGrey}></p>
+                <p className={classNames(style.textBlack, style.activeNumber)}>0.84</p>
               </div>
             </td>
 
             <td className={classNames(style.bodyCell, style.ou, style.ouColumn)}>
               <div className={style.ouRow}>
-                <div className={style.textDarkGray}>1.5</div>
-                <div className={style.textLightGray}>o</div>
-                <div className={classNames(style.textBlue, style.activeNumber)}>0.94</div>
+                <p className={style.textDarkGray}>1.5</p>
+                <p className={style.textLightGray}>o</p>
+                <p className={classNames(style.textBlue, style.activeNumber)}>0.94</p>
               </div>
 
               <div className={style.ouRow}>
-                <div className={style.textDarkGray}></div>
-                <div className={style.textLightGray}>u</div>
-                <div className={classNames(style.textBlue, style.activeNumber)}>0.92</div>
+                <p className={style.textDarkGray}></p>
+                <p className={style.textLightGray}>u</p>
+                <p className={classNames(style.textBlue, style.activeNumber)}>0.92</p>
               </div>
             </td>
 
             <td className={classNames(style.bodyCell, style.oneXTwo, style.oneXTwoColumn)}>
-              <div className={style.oneXTwoRow}>
-                <div className={classNames(style.textBlue, style.activeNumber)}>2.44</div>
-              </div>
+              <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}>2.44</p>
 
-              <div className={style.oneXTwoRow}>
-                <div className={classNames(style.textBlue, style.activeNumber)}>3.25</div>
-              </div>
+              <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}>3.25</p>
 
-              <div className={style.oneXTwoRow}>
-                <div className={classNames(style.textBlue, style.activeNumber)}>2.62</div>
-              </div>
+              <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}>2.62</p>
             </td>
 
             <td className={classNames(style.bodyCell, style.firstHalf)} colSpan={3}></td>
@@ -166,42 +165,36 @@ export const SportsbookTable: React.FC = () => {
 
             <td className={classNames(style.bodyCell, style.hdp, style.hdpColumn)}>
               <div className={style.hdpRow}>
-                <div className={style.textDarkGrey}>0</div>
-                <div className={classNames(style.textBlue, style.activeNumber)}>0.69</div>
+                <p className={style.textDarkGrey}>0</p>
+                <p className={classNames(style.textBlue, style.activeNumber)}>0.69</p>
               </div>
 
               <div className={style.hdpRow}>
-                <div className={style.textDarkGrey}></div>
-                <div className={classNames(style.textRed, style.activeNumber)}>-0.81</div>
+                <p className={style.textDarkGrey}></p>
+                <p className={classNames(style.textRed, style.activeNumber)}>-0.81</p>
               </div>
             </td>
 
             <td className={classNames(style.bodyCell, style.ou, style.ouColumn)}>
               <div className={style.ouRow}>
-                <div className={style.textDarkGray}>1.5/2</div>
-                <div className={style.textLightGray}>o</div>
-                <div className={classNames(style.textRed, style.activeNumber)}>-0.80</div>
+                <p className={style.textDarkGray}>1.5/2</p>
+                <p className={style.textLightGray}>o</p>
+                <p className={classNames(style.textRed, style.activeNumber)}>-0.80</p>
               </div>
 
               <div className={style.ouRow}>
-                <div className={style.textDarkGray}></div>
-                <div className={style.textLightGray}>u</div>
-                <div className={classNames(style.textBlue, style.activeNumber)}>0.66</div>
+                <p className={style.textDarkGray}></p>
+                <p className={style.textLightGray}>u</p>
+                <p className={classNames(style.textBlue, style.activeNumber)}>0.66</p>
               </div>
             </td>
 
             <td className={classNames(style.bodyCell, style.oneXTwo, style.oneXTwoColumn)}>
-              <div className={style.oneXTwoRow}>
-                <div className={classNames(style.textBlue, style.activeNumber)}></div>
-              </div>
+              <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}></p>
 
-              <div className={style.oneXTwoRow}>
-                <div className={classNames(style.textBlue, style.activeNumber)}></div>
-              </div>
+              <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}></p>
 
-              <div className={style.oneXTwoRow}>
-                <div className={classNames(style.textBlue, style.activeNumber)}></div>
-              </div>
+              <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}></p>
             </td>
 
             <td className={classNames(style.bodyCell, style.firstHalf)} colSpan={3}></td>
@@ -216,42 +209,36 @@ export const SportsbookTable: React.FC = () => {
 
             <td className={classNames(style.bodyCell, style.hdp, style.hdpColumn)}>
               <div className={style.hdpRow}>
-                <div className={style.textDarkGrey}>0.5</div>
-                <div className={classNames(style.textRed, style.activeNumber)}>-0.71</div>
+                <p className={style.textDarkGrey}>0.5</p>
+                <p className={classNames(style.textRed, style.activeNumber)}>-0.71</p>
               </div>
 
               <div className={style.hdpRow}>
-                <div className={style.textDarkGrey}></div>
-                <div className={classNames(style.textBlue, style.activeNumber)}>0.59</div>
+                <p className={style.textDarkGrey}></p>
+                <p className={classNames(style.textBlue, style.activeNumber)}>0.59</p>
               </div>
             </td>
 
             <td className={classNames(style.bodyCell, style.ou, style.ouColumn)}>
               <div className={style.ouRow}>
-                <div className={style.textDarkGray}>1/1.5</div>
-                <div className={style.textLightGray}>o</div>
-                <div className={classNames(style.textBlue, style.activeNumber)}>0.64</div>
+                <p className={style.textDarkGray}>1/1.5</p>
+                <p className={style.textLightGray}>o</p>
+                <p className={classNames(style.textBlue, style.activeNumber)}>0.64</p>
               </div>
 
               <div className={style.ouRow}>
-                <div className={style.textDarkGray}></div>
-                <div className={style.textLightGray}>u</div>
-                <div className={classNames(style.textRed, style.activeNumber)}>-0.78</div>
+                <p className={style.textDarkGray}></p>
+                <p className={style.textLightGray}>u</p>
+                <p className={classNames(style.textRed, style.activeNumber)}>-0.78</p>
               </div>
             </td>
 
             <td className={classNames(style.bodyCell, style.oneXTwo, style.oneXTwoColumn)}>
-              <div className={style.oneXTwoRow}>
-                <div className={classNames(style.textBlue, style.activeNumber)}></div>
-              </div>
+              <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}></p>
 
-              <div className={style.oneXTwoRow}>
-                <div className={classNames(style.textBlue, style.activeNumber)}></div>
-              </div>
+              <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}></p>
 
-              <div className={style.oneXTwoRow}>
-                <div className={classNames(style.textBlue, style.activeNumber)}></div>
-              </div>
+              <p className={classNames(style.textBlue, style.activeNumber, style.oneXTwoRow)}></p>
             </td>
 
             <td className={classNames(style.bodyCell, style.firstHalf)} colSpan={3}></td>

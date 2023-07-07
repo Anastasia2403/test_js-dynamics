@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import "./app.css";
+import "./index.css";
 import { Header } from "./components/header";
 
 export const App: React.FC = () => {
