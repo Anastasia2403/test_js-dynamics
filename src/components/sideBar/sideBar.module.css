@@ -1,13 +1,44 @@
 .sideBar {
-  width: 190px;
-  margin-right: 20px;
+  margin:0 20px 0 5px;
 }
 
-.firstBlock {
-  background: rgb(220, 229, 239);
-  padding: 3px 7px;
-  font-weight: bold;
-  border: 1px solid rgb(144, 175, 204);
-  margin-top: 5px;
+.topBlock {
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  background: var(--secondary-white) ;
+
+  border: 1px solid var(--blue-100);
   border-radius: 5px 5px 0px 0px;
+}
+
+.topBlockItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.configButton {
+  background-color: var(--blue-300);
+  height: 15px;
+  width: 15px;
+  padding: 0;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.refreshButton {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.blueText {
+  color: var(--bright-blue);
 }
