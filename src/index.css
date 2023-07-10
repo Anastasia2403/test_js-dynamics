@@ -1,8 +1,8 @@
 :root {
   --primary-white: #fff;
-  --secondary-white: #DCE5EF;
-  --primary-gray: #bbb;
-  --secondery-gray: #555;
+  --secondary-white: #dce5ef;
+  --primary-gray: #edeeee;
+  --secondary-gray: #b1b1b1;
   --dark-gray: #333;
   --light-table: rgb(245, 241, 213);
   --primary-table: rgb(255, 213, 197);
@@ -13,7 +13,7 @@
   --blue-400: #355183;
   --blue-500: #19406a;
   --blue-600: #022352;
-  --bright-blue: #0000EE;
+  --bright-blue: #0000ee;
   --black-color: #000;
   --red-color: #b50000;
   --orange-color: #fd5f1a;
