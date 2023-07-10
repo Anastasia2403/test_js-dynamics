@@ -1,40 +1,48 @@
 .sideBar {
-  margin:0 20px 0 5px;
+  min-width: 180px;
+  margin: 0 20px 0 5px;
+  font-size: 11px;
+  font-weight: bold;
 }
 
 .sideBarBlock {
-  min-width: 180px;
   display: flex;
   flex-direction: column;
   padding-top: 5px;
   margin-bottom: 4px;
   background: var(--secondary-white);
 
-  border: 1px solid var(--blue-100);
+  border: 1px solid var(--blue-200);
   border-radius: 5px 5px 0px 0px;
 }
 
 .sideBarBlockItem {
   display: flex;
   justify-content: space-between;
-  font-size: 11px;
-  font-weight: bold;
+  align-items: center;
   padding: 0 5px 5px 5px;
 }
 
-.sideBarBlockItem:last-child {
-  padding: 0;
-  border-top: 1px solid var(--blue-100);
+.sideBarBlockItemContent {
+  background: var(--secondary-white);
+  padding-top: 5px;
+  border: none;
 }
 
-.configButton {
+.sideBarBlockItem:nth-child(3) {
+  padding: 0;
+  border-top: 1px solid var(--blue-200);
+}
+
+.openMore {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: var(--blue-300);
   height: 14px;
   width: 14px;
   padding: 0;
-  border: none;
+  border: 1px solid var(--primary-gray);
   border-radius: 10px;
   transform: rotate(180deg);
   cursor: pointer;
@@ -59,9 +67,8 @@
   padding: 0 0 0 5px;
   background: var(--primary-gray);
   text-align: left;
-  font-size: 11px;
   font-weight: normal;
-  color: #000f60;
+  color: var(--blue-600);
 }
 
 .credit {
@@ -70,26 +77,273 @@
   text-align: right;
   background: var(--primary-white);
   font-size: 10px;
-  font-weight: bold;
 }
 
-.forecastHeader {
+.blueHeader {
   background-color: var(--blue-400);
-  border: 1px solid var(--blue-600);
-  font-size: 11px;
-  font-weight: bold;
-  color: #fff;
-  padding: 5px;
-}
-
-.forecastHeaderTitle {
-  display: flex;
+  border: 1px solid var(--blue-200);
 }
 
 .refreshButtonForecast {
   background-color: var(--blue-400);
 }
 
-.forecastHeader .sideBarBlockItem {
+.blueHeaderTitle {
+  color: var(--primary-white);
+  text-decoration: none;
+}
+
+.blueHeaderTitle:hover {
+  color: var(--primary-yellow);
+}
+
+.sumTitle {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+.coeficientInfo {
+  background-color: var(--blue-100);
+  border: solid 1px var(--blue-200);
+  margin-bottom: 5px;
+}
+
+.coeficientInfoTitle {
+  padding: 5px 0px 5px 10px;
+  font-size: 12px;
+  border-bottom: 1px solid var(--blue-200);
+}
+
+.coeficientInfoDetails {
+  background-color: var(--primary-table);
+  text-align: right;
+  padding: 5px;
+}
+
+.coeficientInfoDetailsTitle {
+  color: var(--red-color);
+  font-size: 13px;
+}
+
+.textBlue {
+  color: var(--blue-600);
+  font-size: 13px;
+}
+
+.coeficientInfoDetailsContent {
+  padding-bottom: 5px;
+}
+
+.autoRefresh {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: var(--secondary-gray);
+  font-weight: 100;
+}
+
+.coeficientInfoDescription {
+  background-color: var(--primary-white);
+  border: solid 1px var(--primary-gray);
+  padding: 5px 0 5px 10px;
+  font-size: 10px;
+  font-weight: 100;
+}
+
+.coeficientInfoDescriptionTitle {
+  color: var(--bright-blue);
+  text-transform: uppercase;
+}
+
+.coeficientInfoInput {
+  background-color: var(--primary-gray);
+  border-top: 1px solid var(--secondary-gray);
+  border-bottom: 1px solid var(--secondary-gray);
+  padding: 5px 5px 5px 10px;
+}
+
+.inputBlock {
+  max-width: 160px;
+  margin-left: 5px;
+  text-align: right;
+}
+
+.coeficientInfoValue {
+  display: flex;
+  border: 1px solid var(--primary-white);
+}
+
+.coeficientInfoValuePayout {
+  border-bottom: none;
+}
+
+.coeficientInfoValueTitle {
+  display: flex;
+  flex: 1;
+  background-color: var(--secondary-gray);
+  padding: 5px 0 5px 5px;
+  font-weight: normal;
+  border-right: 1px solid var(--primary-white);
+}
+
+.coeficientInfoValueContent {
+  display: flex;
+  flex: 1.5;
+  background-color: var(--primary-gray);
+  justify-content: flex-end;
+  padding: 5px 5px 5px 0;
+}
+
+.contentBlue {
+  color: var(--bright-blue);
+  font-weight: 100;
+}
+
+.coeficientInfoButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  border-top: 1px solid var(--primary-white);
+}
+
+.infoButton {
+  min-width: 60px;
+  padding: 0 10px;
+  font-family: Tahoma, sans-serif;
+  border: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.infoButton:hover {
+  background-color: var(--orange-color);
+  border: 1px solid var(--red-color);
+}
+
+.buttonBet {
+  background-color: var(--blue-400);
+  color: var(--primary-white);
+  margin-right: 5px;
+  border-color: var(--blue-300);
+  border-radius: 1px;
+}
+
+.buttonCancel {
+  border-color: var(--secondary-gray);
+  border-radius: 1px;
+}
+
+.liveCenter {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: linear-gradient(to bottom, #fda1a1, #fa5c5c);
+  padding: 5px 0;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+.liveCenterTitle {
+  color: var(--red-color);
+  font-size: 12px;
+}
+
+.liveCenterCounter {
+  padding: 3px 10px;
+  background-color: var(--red-color);
+  border-radius: 5px;
+  color: var(--secondary-yellow);
+  font-size: 12px;
+}
+
+.favorites {
+  display: flex;
+  padding: 5px 0 5px 5px;
+  background-color: var(--blue-400);
+  border: 1px solid var(--blue-500);
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--primary-white);
+  margin-bottom: 5px;
+}
+
+.favorites:hover {
+  color: var(--primary-yellow);
+}
+
+.betList {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--blue-400);
+  border: 1px solid var(--blue-500);
+  border-radius: 5px 5px 0px 0px;
+  padding: 5px;
+  color: var(--primary-white);
+  cursor: pointer;
+}
+
+.betList:hover {
+  color: var(--primary-yellow);
+}
+
+.betListContainer {
+  display: flex;
+  align-items: center;
+}
+
+.betListTitle {
+  padding-left: 5px;
+  font-family: Tahoma, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.betListContent {
+  display: none;
+}
+
+.betListContentMain {
+  display: flex;
+  background-color: var(--blue-400);
+  padding: 0 5px;
+}
+
+.betListOpen {
+  display: flex;
+  flex-direction: column;
+}
+
+.betListContentItem {
+  background-color: var(--blue-400);
+  flex: 1;
+  text-align: center;
+  padding: 5px 0;
+  border: none;
+  cursor: pointer;
+  font-family: Tahoma, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--primary-white);
+}
+
+.active {
+  background-color: var(--secondary-white);
+  color: var(--red-color);
+  border: 1px solid var(--blue-100);
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+}
+
+.betListContentBottom {
+  background-color: var(--primary-white);
+  border: 1px solid var(--blue-200);
   border-top: none;
+  padding: 5px;
+  font-weight: 100;
+  text-align: center;
 }
